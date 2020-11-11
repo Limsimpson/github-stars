@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* reset css line 3 - line 108 */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+form,
+fieldset,
+p,
+button,
+input {
+  word-spacing: normal;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  *word-break: break-all;
+  -ms-word-break: break-all;
+  white-space: nowrap;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  min-width: 270px;
+}
+
+img,
+fieldset,
+iframe {
+  padding: 0;
+  border: 0 none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+select,
+button {
+  vertical-align: middle;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button * {
+  position: relative;
+}
+
+button img {
+  *left: auto;
+}
+
+input,
+button {
+  border: 0 none;
+  -moz-border: 0 none;
+  -webkit-border: 0 none;
+  -o-border: 0 none;
+  background-color: transparent;
+  -moz-background-color: transparent;
+  -webkit-background-color: transparent;
+  -o-background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+i {
+  font-style: normal;
+}
+
+/* GitHub Stars 로고 css */
+.logo {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* 탭 화면 css */
+#tab-wrap {
+  border: 1px solid #aeaeae;
+}
+
+.tab-header,
+#search-form,
+#btn-star,
+.content-wrap .profile-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 탭 헤더 css */
+.tab-header > li {
+  width: 50%;
+  border-right: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+}
+
+.tab-header > li:last-child {
+  border-right: 0 none;
+}
+
+.tab-header > li.show {
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+.tab-header > li.show:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+}
+
+.tab-header > li > button {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+/* 탭 내용 css */
+.tab-content > li {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content li.show {
+  display: block;
+}
+
+/* 검색 창 css */
+#search-form {
+  position: relative;
+  border-bottom: 1px solid #aeaeae;
+  box-sizing: border-box;
+}
+
+#search-form > input {
+  padding: 10px;
+  cursor: text;
+  width: calc(100% - 40px);
+}
+
+#search-form > button {
+  width: 40px;
+  height: 35px;
+  text-indent: -9999em;
+}
+
+/* 돋보기 아이콘 css */
+#search-form > button:before,
+#search-form > button:after {
+  position: absolute;
+  content: "";
+}
+
+#search-form > button:before {
+  top: 5px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+#search-form > button:after {
+  bottom: 5px;
+  right: 10px;
+  width: 2px;
+  height: 10px;
+  background-color: #000;
+  transform: rotate(135deg);
+}
+
+/* 탭 사용자 목록 */
+.content-wrap > li {
+  border-bottom: 1px solid #aeaeae;
+}
+
+.content-wrap > li:last-child {
+  border-bottom: 0 none;
+}
+
+#btn-star {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#btn-star .image {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aeaeae;
+  border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+/* 목록 상단 초성 css */
+.start-letter {
+  padding: 5px 10px;
+  border-bottom: 1px solid #aeaeae;
+}
+
+/* 별 css */
+.star > span {
+  display: block;
+  width: 0px;
+  height: 0px;
+  text-indent: -9999em;
+}
+
+.star > i:after {
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  content: "☆";
+}
+
+.star.fill > i:after {
+  content: "★";
+}
+
+/* 빈 목록 css */
+.empty-list {
+  text-align: center;
+  padding: 22px;
+}

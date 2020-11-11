@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Stars</title>
+  </head>
+  <body>
+    <header>
+      <!-- logo css를 위한 class -->
+      <h1 class="logo" tabindex="0">GitHub Stars</h1>
+    </header>
+    <!-- js에서 탭 메뉴 이용시 탭 요소에 접근이 쉽게 해주도록 감싼 div에 id를 부여  -->
+    <div id="tab-wrap">
+      <!-- 탭 헤더 각각 탭 메뉴를 클릭할 때를 위한 class -->
+      <ul class="tab-header">
+        <li><button>API</button></li>
+        <li><button>로컬</button></li>
+      </ul>
+      <!-- 검색어를 입력 후 제출할 때 이벤트 리스너에 연동하기 위해 id 부여 -->
+      <form id="search-form">
+        <input id="search-input" name="search-input" type="search" placeholder="Api 검색어를 입력하세요."/>
+        <button type="submit">
+          검색 실행 버튼
+        </button>
+      </form>
+      <!-- 탭 콘텐츠 각각 탭 메뉴를 클릭할 때를 위한 class -->
+      <ul class="tab-content">
+        <!-- 각 목록 내용을 넣어주기 위한 id 값 부여 -->
+        <li id="api-list-view"></li>
+        <li id="local-list-view"></li>
+      </ul>
+    </div>
+  </body>
+</html>
