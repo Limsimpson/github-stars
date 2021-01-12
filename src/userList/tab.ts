@@ -1,9 +1,6 @@
 import { store } from "./state";
-
-interface TabControllerParam {
-  header : NodeListOf<Element>,
-  contents: NodeListOf<Element>
-}
+import { $ } from './utils';
+import { TabControllerParam } from './types';
 
 const TabController = (param:TabControllerParam) => {
   let header = param.header,
@@ -24,7 +21,7 @@ const TabController = (param:TabControllerParam) => {
       }
 
       // 탭 선택에 따른 검색창 placeholder 반영
-      let searchInput = document.querySelector("#search-form > input") as HTMLInputElement;
+      let searchInput = $<HTMLInputElement>("#search-form > input");
       if (store.clicked === 0) {
         searchInput.placeholder = "Api 검색어를 입력하세요.";
       } else {
@@ -49,7 +46,7 @@ const TabController = (param:TabControllerParam) => {
   };
 };
 
-let tapMenu = document.querySelector("#tab-wrap") as HTMLElement;
+let tapMenu = $<HTMLDivElement>("#tab-wrap");
 
 // querySelectAll은 배열이기 때문에
 // TabController내부의 header와 contents의 index로 탭을 조종한다.

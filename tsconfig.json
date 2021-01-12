@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "allowJs": true,
+    "target": "ES5",
+    "outDir": "dist",
     "module": "commonjs",
+    "moduleResolution": "Node",
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "noImplicitAny": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "src/**/*.ts"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

@@ -3,7 +3,7 @@ import { renderStarUsersList } from "./list";
 import { searchStarUsers } from "./search";
 import { User } from './types';
 
-const onClickStar = (userId: number) => {
+export const onClickStar = (userId: number) => {
   let user: User;
   let changedUser = document.getElementById(`user-${userId}`) as HTMLElement;
   let changedStar = changedUser.querySelector(".star") as HTMLElement;
@@ -36,8 +36,3 @@ const onClickStar = (userId: number) => {
     renderStarUsersList();
   }
 };
-
-declare global {
-  interface Window { onClickStar: (userId: number) => void }
-}
-window.onClickStar = onClickStar;

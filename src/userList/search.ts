@@ -4,12 +4,13 @@ import {
   searchedUsersList,
   renderStarUsersList,
 } from "./list";
+import { $ } from './utils';
 import { searchUsers } from "./api";
 import { User } from './types';
 
-let apiListView = document.getElementById("api-list-view") as HTMLElement;
-let localListView = document.getElementById("local-list-view") as HTMLElement;
-let searchFrom = document.getElementById("search-form") as HTMLElement;
+const apiListView = $('#api-list-view');
+const localListView = $('#local-list-view');
+const searchFrom = $<HTMLFormElement>("#search-form");
 
 // 사용자 검색
 searchFrom.addEventListener("submit", (e:Event) => {
